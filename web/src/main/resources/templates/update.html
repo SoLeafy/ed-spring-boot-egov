@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>글 수정</title>
+<th:block th:insert="~{menu.html :: head}"></th:block>
+</head>
+<body id="page-top">
+	        <!-- Navigation-->
+        <th:block th:insert="~{menu.html :: menu}"></th:block>
+        <!-- Mashead header-->
+        <!-- <th:block th:insert="~{menu.html :: head}"></th:block> -->
+        <!-- Quote/testimonial aside-->
+        <aside class="text-center">
+            <div class="container px-5">
+            <br>
+            <br>
+            <h1>글 수정</h1>
+            <!-- 카테고리, 글번호, 페이지 번호 -->
+            들어온 카테고리 : [[${update.mtcate}]]
+            
+            <form action="/postUpdate" method="post">
+            <div class="p-2 rounded bg-light">
+            	<div class="input-group mb-3">
+            		<span class="input-group-text" id="title">제목</span>
+            		<input type="text" name="title" class="form-control" th:value="${update.mttitle}" placeholder="제목" aria-label="제목" aria-describedby="title">
+            	</div>
+            	<div class="input-group">
+            		<span class="input-group-text">본문</span>
+            		<textarea id="content" name="content" class="form-control" aria-label="With textarea">[[${update.mtcontent}]]</textarea>
+            	</div>
+            	<div class="mt-3">
+            		<button type="submit" class="btn btn-outline-info">글쓰기</button>
+            	</div>
+            </div>
+            <input type="hidden" name="mtcate" th:value="${update.mtcate}">
+            <input type="hidden" name="mtno" th:value="${update.mtno}">
+<!--             <input type="hidden" name="mtcate" value="${param.cate}"> -->
+            </form>
+            
+            </div>
+        </aside>
+        
+        <!-- App features section-->
+        
+        <!-- Basic features section-->
+        
+        <!-- Call to action section-->
+        
+        <!-- App badge section-->
+        
+        <!-- Footer-->
+        <th:block th:insert="~{menu.html :: footer}"></th:block>
+
+	<!-- <th:block th:text="${detail.mtno}"></th:block>
+	<th:block th:text="${detail.mttitle}"></th:block>
+	<th:block th:text="${detail.mname}"></th:block>
+	<th:block th:utext="${detail.mtcontent}"></th:block> -->
+</body>
+</html>

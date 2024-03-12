@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>디테일</title>
+<th:block th:insert="~{menu.html :: head}"></th:block>
+</head>
+<body id="page-top">
+	        <!-- Navigation-->
+        <th:block th:insert="~{menu.html :: menu}"></th:block>
+        <!-- Mashead header-->
+        <!-- <th:block th:insert="~{menu.html :: head}"></th:block> -->
+        <!-- Quote/testimonial aside-->
+        <aside class="text-center">
+            <div class="container px-5">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="rounded outline">
+            	<form action="/login" method="post">
+            		<input type="text" name="id">
+            		<input type="password" name="pw">
+            		<button type="submit">LOGIN</button>
+            	</form>
+            </div>
+            
+            </div>
+        </aside>
+        
+        <!-- App features section-->
+        
+        <!-- Basic features section-->
+        
+        <!-- Call to action section-->
+        
+        <!-- App badge section-->
+        
+        <!-- Footer-->
+        <th:block th:insert="~{menu.html :: footer}"></th:block>
+
+	<!-- <th:block th:text="${detail.mtno}"></th:block>
+	<th:block th:text="${detail.mttitle}"></th:block>
+	<th:block th:text="${detail.mname}"></th:block>
+	<th:block th:utext="${detail.mtcontent}"></th:block> -->
+</body>
+</html>

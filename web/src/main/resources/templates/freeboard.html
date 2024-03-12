@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Free Board</title>
+</head>
+<body>
+	<h1>board</h1>
+	
+	<div>
+		<table>
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>글쓴이</th>
+				<th>날짜</th>
+				<th>ip</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="row : ${fb}">
+				<td th:text="${row.mtno}"></td>
+				<td>[[${row.mttitle}]]</td>
+				<td th:text="${row.mname}"></td>
+				<td th:text="${row.mtdate}"></td>
+				<td th:text="${row.mtip}"></td>
+			</tr>
+		</tbody>
+		</table>
+		<a th:href="@{/write(mtcate=${fb[0].mtcate})}">글쓰기</a>
+	</div>
+</body>
+</html>
